@@ -24,12 +24,11 @@ Trong thời đại công nghệ số, nhận diện khuôn mặt ngày càng tr
 
 ## Công nghệ sử dụng
 
-- **Python** – ngôn ngữ chính
-- **OpenCV** – xử lý ảnh, ngưỡng hóa, biến đổi hình học
-- **NumPy** – xử lý mảng ảnh
-- **SciPy** – thực hiện toán tử morphological như Closing
-- **Matplotlib** – hiển thị kết quả
-
+- **OpenCV:** Thư viện xử lý ảnh và video mạnh mẽ, dùng để truy xuất webcam và phát hiện khuôn mặt.
+- **face_recognition:** Thư viện nhận diện khuôn mặt dựa trên Deep Learning, đơn giản nhưng hiệu quả.
+- **Haar Cascade Classifier:** Mô hình học máy truyền thống dùng để phát hiện khuôn mặt trong ảnh.
+- **NumPy:** Thư viện xử lý mảng, dùng để hỗ trợ thao tác dữ liệu ảnh và vector đặc trưng.
+- **Python:** Ngôn ngữ chính cho toàn bộ hệ thống, đơn giản, linh hoạt và dễ triển khai.
 ---
 
 ## Nội dung thực hiện
