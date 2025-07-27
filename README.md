@@ -36,6 +36,5 @@ Trong thời đại công nghệ số, nhận diện khuôn mặt ngày càng tr
 ## Tài liệu tham khảo
 
 - [Digital Image Processing - Rafael C. Gonzalez](https://www.amazon.com/Digital-Image-Processing-Rafael-Gonzalez/dp/013168728X)
-- [Scikit-image: Image processing in Python](https://scikit-image.org/)
 - [OpenCV Documentation](https://docs.opencv.org/)
 - Slide bài giảng Nhập môn Xử lý ảnh số - Văn Lang University
