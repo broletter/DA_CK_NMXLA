@@ -12,6 +12,16 @@ Trong thời đại công nghệ số, nhận diện khuôn mặt ngày càng tr
 
 ---
 
+## Tính năng chính 
+
+- **Thu thập dữ liệu khuôn mặt:** Giao diện camera cho phép người dùng chụp và lưu ảnh khuôn mặt kèm tên tương ứng.
+- **Trích xuất đặc trưng:** Sử dụng face_recognition để mã hóa khuôn mặt thành vector đặc trưng.
+- **Nhận diện khuôn mặt:** So sánh vector đặc trưng với dữ liệu đã thu thập để xác định danh tính người trong thời gian thực.
+- **Hiển thị real-time:** Hệ thống hiển thị Bounding Box và tên người ngay trên webcam, trực quan và chính xác.
+- **Quản lý dữ liệu đơn giản:** Dữ liệu khuôn mặt được lưu cục bộ theo dạng file ảnh, dễ chỉnh sửa và mở rộng.
+  
+---
+
 ## Công nghệ sử dụng
 
 - **Python** – ngôn ngữ chính
