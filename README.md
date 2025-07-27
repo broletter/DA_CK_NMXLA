@@ -1,8 +1,8 @@
 # Nhập Môn Xử Lý Ảnh Số - Đồ Án Cuối Kì  
 ## **Face Reconigtion**
-**Nhóm thực hiện:** Nhóm 3
-**Sinh viên thực hiện:** Hà Đại Vĩ - Đoàn Nhật Khôi - Phạm Thanh Tùng - Lê Hữu Khang
-**Giảng viên:** Đỗ Hữu Quân  
+-**Nhóm thực hiện:** Nhóm 3
+-**Sinh viên thực hiện:** Hà Đại Vĩ - Đoàn Nhật Khôi - Phạm Thanh Tùng - Lê Hữu Khang
+-**Giảng viên:** Đỗ Hữu Quân  
 
 ---
 
