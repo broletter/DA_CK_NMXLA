@@ -66,30 +66,30 @@ Thư mục này sẽ chứa các file .npy lưu dữ liệu khuôn mặt.
 ## **Các bước chạy chương trình thu thập dữ liệu khuôn mặt**
 Đây là đoạn code thứ nhất, để thu thập dữ liệu và lưu thành file .npy.
 
-- 1.Chạy script Python:
+- 1. Chạy script Python:
 ```
 python face_data.py
 ```
 
-- 2.Nhập tên người cần thu thập dữ liệu, ví dụ:
+- 2. Nhập tên người cần thu thập dữ liệu, ví dụ:
 ```
 Enter the name of person : Vi
 ```
 
-- 3.Hệ thống sẽ bật webcam và phát hiện khuôn mặt.
+- 3. Hệ thống sẽ bật webcam và phát hiện khuôn mặt.
 ```
 Mỗi khi webcam bắt được khuôn mặt, sẽ vẽ khung xanh.
 Sau mỗi 10 khung hình, tự động lưu thêm một ảnh vào tập dữ liệu.
 ```
 
-- 4.Kết thúc thu thập dữ liệu:
+- 4. Kết thúc thu thập dữ liệu:
 Nhấn phím q để dừng chương trình.
 Chương trình sẽ lưu dữ liệu dưới dạng:
 ```
 ./face_dataset/Vi.npy
 ```
 
-- 5.Kết quả
+- 5. Kết quả
 File .npy chứa mảng dữ liệu ảnh khuôn mặt đã thu thập.
 
 ## **Các bước chạy chương trình nhận diện khuôn mặt**
