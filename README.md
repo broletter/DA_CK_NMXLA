@@ -66,54 +66,54 @@ Thư mục này sẽ chứa các file .npy lưu dữ liệu khuôn mặt.
 ## **Các bước chạy chương trình thu thập dữ liệu khuôn mặt**
 Đây là đoạn code thứ nhất, để thu thập dữ liệu và lưu thành file .npy.
 
-- 1. Chạy script Python:
+- **1.** Chạy script Python:
 ```
 python face_data.py
 ```
 
-- 2. Nhập tên người cần thu thập dữ liệu, ví dụ:
+- **2.** Nhập tên người cần thu thập dữ liệu, ví dụ:
 ```
 Enter the name of person : Vi
 ```
 
-- 3. Hệ thống sẽ bật webcam và phát hiện khuôn mặt.
+- **3.** Hệ thống sẽ bật webcam và phát hiện khuôn mặt.
 ```
 Mỗi khi webcam bắt được khuôn mặt, sẽ vẽ khung xanh.
 Sau mỗi 10 khung hình, tự động lưu thêm một ảnh vào tập dữ liệu.
 ```
 
-- 4. Kết thúc thu thập dữ liệu:
+- **4.** Kết thúc thu thập dữ liệu:
 Nhấn phím q để dừng chương trình.
 Chương trình sẽ lưu dữ liệu dưới dạng:
 ```
 ./face_dataset/Vi.npy
 ```
 
-- 5. Kết quả
+- **5.** Kết quả
 File .npy chứa mảng dữ liệu ảnh khuôn mặt đã thu thập.
 
 ## **Các bước chạy chương trình nhận diện khuôn mặt**
 Đây là đoạn code thứ hai, dùng để nhận diện khuôn mặt thời gian thực.
-- 1. Đảm bảo thư mục face_dataset có ít nhất một file .npy đã được thu thập từ bước trước.
+- **1.** Đảm bảo thư mục face_dataset có ít nhất một file .npy đã được thu thập từ bước trước.
 
-- 2️. Chạy script Python:
+- **2️.** Chạy script Python:
 ```
 python face_recognition.py
 ```
-- 3. Hệ thống sẽ tải toàn bộ dữ liệu khuôn mặt, huấn luyện mô hình nhận diện.
+- **3.** Hệ thống sẽ tải toàn bộ dữ liệu khuôn mặt, huấn luyện mô hình nhận diện.
 Thông tin hiển thị:
 ```[INFO] Loaded training data:
   Faces: (số lượng ảnh, kích thước vector)
   Labels: (số lượng nhãn)
 ```
-- 4. Mở webcam nhận diện khuôn mặt.
+- **4.** Mở webcam nhận diện khuôn mặt.
 Nếu phát hiện khuôn mặt:
 ```
 Sẽ vẽ khung chữ nhật (xanh lá: nhận diện được, đỏ: Unknown).
 Hiển thị tên người trên hình.
 ```
 
-- 5️. Kết thúc nhận diện:
+- **5️.** Kết thúc nhận diện:
 ```
 Nhấn phím q để dừng chương trình.
 ```
