@@ -32,6 +32,145 @@ Trong thời đại công nghệ số, nhận diện khuôn mặt ngày càng tr
 - **Python:** Ngôn ngữ chính cho toàn bộ hệ thống, đơn giản, linh hoạt và dễ triển khai.
 ---
 
+## HƯỚNG DẪN CÀI ĐẶT VÀ SỬ DỤNG HỆ THỐNG THU THẬP VÀ NHẬN DIỆN KHUÔN MẶT
+- **1. Các yêu cầu chuẩn bị**
+Trước khi chạy mã nguồn, cần cài đặt:
+
+✅ Python
+
+Phiên bản khuyến nghị: Python 3.6 – 3.10
+
+✅ Thư viện Python
+Cài đặt bằng pip:
+
+bash
+Sao chép
+Chỉnh sửa
+pip install numpy opencv-python scikit-learn
+✅ File cascade phát hiện khuôn mặt
+
+File haarcascade_frontalface_alt.xml phải có trong thư mục code.
+
+Hoặc dùng đường dẫn mặc định của OpenCV:
+
+python
+Sao chép
+Chỉnh sửa
+cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_alt.xml")
+✅ Tạo thư mục lưu dữ liệu khuôn mặt
+Trong thư mục dự án, tạo thư mục:
+
+bash
+Sao chép
+Chỉnh sửa
+./face_dataset/
+Thư mục này sẽ chứa các file .npy lưu dữ liệu khuôn mặt.
+
+🟢 2. Các bước chạy chương trình thu thập dữ liệu khuôn mặt
+Đây là đoạn code thứ nhất, để thu thập dữ liệu và lưu thành file .npy.
+
+🔹 Cách sử dụng
+1️⃣ Chạy script Python:
+
+bash
+Sao chép
+Chỉnh sửa
+python face_data.py
+2️⃣ Nhập tên người cần thu thập dữ liệu, ví dụ:
+
+yaml
+Sao chép
+Chỉnh sửa
+Enter the name of person : Alice
+3️⃣ Hệ thống sẽ bật webcam và phát hiện khuôn mặt.
+
+Mỗi khi webcam bắt được khuôn mặt, sẽ vẽ khung xanh.
+
+Sau mỗi 10 khung hình, tự động lưu thêm một ảnh vào tập dữ liệu.
+
+4️⃣ Kết thúc thu thập dữ liệu:
+
+Nhấn phím q để dừng chương trình.
+
+Chương trình sẽ lưu dữ liệu dưới dạng:
+
+bash
+Sao chép
+Chỉnh sửa
+./face_dataset/Alice.npy
+5️⃣ Kết quả:
+
+File .npy chứa mảng dữ liệu ảnh khuôn mặt đã thu thập.
+
+🟢 3. Các bước chạy chương trình nhận diện khuôn mặt
+Đây là đoạn code thứ hai, dùng để nhận diện khuôn mặt thời gian thực.
+
+🔹 Cách sử dụng
+1️⃣ Đảm bảo thư mục face_dataset có ít nhất một file .npy đã được thu thập từ bước trước.
+
+2️⃣ Chạy script Python:
+
+bash
+Sao chép
+Chỉnh sửa
+python face_recognition.py
+3️⃣ Hệ thống sẽ tải toàn bộ dữ liệu khuôn mặt, huấn luyện mô hình nhận diện.
+Thông tin hiển thị:
+
+yaml
+Sao chép
+Chỉnh sửa
+[INFO] Loaded training data:
+  Faces: (số lượng ảnh, kích thước vector)
+  Labels: (số lượng nhãn)
+4️⃣ Mở webcam nhận diện khuôn mặt.
+
+Nếu phát hiện khuôn mặt:
+
+Sẽ vẽ khung chữ nhật (xanh lá: nhận diện được, đỏ: Unknown).
+
+Hiển thị tên người trên hình.
+
+5️⃣ Kết thúc nhận diện:
+
+Nhấn phím q để dừng chương trình.
+
+🟢 4. Một số lưu ý
+✅ Nếu không nhận diện được khuôn mặt:
+
+Kiểm tra ánh sáng webcam.
+
+Đảm bảo khoảng cách mặt – camera không quá xa.
+
+Nếu hiện "Unknown":
+
+Mô hình nhận diện khoảng cách quá lớn so với dữ liệu huấn luyện.
+
+Cần thu thập thêm dữ liệu hoặc giảm THRESHOLD trong mã nhận diện.
+
+Cập nhật dữ liệu nhận diện mới:
+
+Chạy lại chương trình thu thập dữ liệu với tên mới.
+
+Sau đó chạy lại chương trình nhận diện.
+
+🟢 5. Tóm tắt quy trình sử dụng
+Thu thập dữ liệu khuôn mặt:
+
+Chạy script thứ nhất.
+
+Nhập tên.
+
+Nhấn q để lưu.
+
+Huấn luyện và nhận diện:
+
+Chạy script thứ hai.
+
+Hệ thống tự động huấn luyện.
+
+Nhận diện thời gian thực.
+
 
 ## Tài liệu tham khảo
 
