@@ -33,80 +33,68 @@ Trong thời đại công nghệ số, nhận diện khuôn mặt ngày càng tr
 ---
 
 ## HƯỚNG DẪN CÀI ĐẶT VÀ SỬ DỤNG HỆ THỐNG THU THẬP VÀ NHẬN DIỆN KHUÔN MẶT
-- **1. Các yêu cầu chuẩn bị**
-Trước khi chạy mã nguồn, cần cài đặt:
+**Các yêu cầu chuẩn bị**
 
-✅ Python
-
+**Python**
+```
 Phiên bản khuyến nghị: Python 3.6 – 3.10
+```
 
-✅ Thư viện Python
+**Thư viện Python**
 Cài đặt bằng pip:
-
-bash
-Sao chép
-Chỉnh sửa
+```
 pip install numpy opencv-python scikit-learn
-✅ File cascade phát hiện khuôn mặt
+```
 
-File haarcascade_frontalface_alt.xml phải có trong thư mục code.
+**File cascade phát hiện khuôn mặt**
 
-Hoặc dùng đường dẫn mặc định của OpenCV:
-
-python
-Sao chép
-Chỉnh sửa
+- File haarcascade_frontalface_alt.xml phải có trong thư mục code.
+- Hoặc dùng đường dẫn mặc định của OpenCV:
+```
 cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_alt.xml")
-✅ Tạo thư mục lưu dữ liệu khuôn mặt
-Trong thư mục dự án, tạo thư mục:
+```
 
-bash
-Sao chép
-Chỉnh sửa
+**Tạo thư mục lưu dữ liệu khuôn mặt**
+Trong thư mục dự án, tạo thư mục:
+```
 ./face_dataset/
+```
 Thư mục này sẽ chứa các file .npy lưu dữ liệu khuôn mặt.
 
-🟢 2. Các bước chạy chương trình thu thập dữ liệu khuôn mặt
+---
+
+**Các bước chạy chương trình thu thập dữ liệu khuôn mặt**
 Đây là đoạn code thứ nhất, để thu thập dữ liệu và lưu thành file .npy.
 
-🔹 Cách sử dụng
-1️⃣ Chạy script Python:
-
-bash
-Sao chép
-Chỉnh sửa
+- 1.Chạy script Python:
+```
 python face_data.py
-2️⃣ Nhập tên người cần thu thập dữ liệu, ví dụ:
+```
 
-yaml
-Sao chép
-Chỉnh sửa
-Enter the name of person : Alice
-3️⃣ Hệ thống sẽ bật webcam và phát hiện khuôn mặt.
+- 2.Nhập tên người cần thu thập dữ liệu, ví dụ:
+```
+Enter the name of person : Vi
+```
 
+- 3.Hệ thống sẽ bật webcam và phát hiện khuôn mặt.
+```
 Mỗi khi webcam bắt được khuôn mặt, sẽ vẽ khung xanh.
-
 Sau mỗi 10 khung hình, tự động lưu thêm một ảnh vào tập dữ liệu.
+```
 
-4️⃣ Kết thúc thu thập dữ liệu:
-
+- 4.Kết thúc thu thập dữ liệu:
 Nhấn phím q để dừng chương trình.
-
 Chương trình sẽ lưu dữ liệu dưới dạng:
+```
+./face_dataset/Vi.npy
+```
 
-bash
-Sao chép
-Chỉnh sửa
-./face_dataset/Alice.npy
-5️⃣ Kết quả:
-
+- 5.Kết quả
 File .npy chứa mảng dữ liệu ảnh khuôn mặt đã thu thập.
 
-🟢 3. Các bước chạy chương trình nhận diện khuôn mặt
+**Các bước chạy chương trình nhận diện khuôn mặt**
 Đây là đoạn code thứ hai, dùng để nhận diện khuôn mặt thời gian thực.
-
-🔹 Cách sử dụng
-1️⃣ Đảm bảo thư mục face_dataset có ít nhất một file .npy đã được thu thập từ bước trước.
+- 1.Đảm bảo thư mục face_dataset có ít nhất một file .npy đã được thu thập từ bước trước.
 
 2️⃣ Chạy script Python:
 
