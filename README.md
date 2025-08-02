@@ -92,73 +92,63 @@ Chương trình sẽ lưu dữ liệu dưới dạng:
 - 5.Kết quả
 File .npy chứa mảng dữ liệu ảnh khuôn mặt đã thu thập.
 
-**Các bước chạy chương trình nhận diện khuôn mặt**
+## **Các bước chạy chương trình nhận diện khuôn mặt**
 Đây là đoạn code thứ hai, dùng để nhận diện khuôn mặt thời gian thực.
-- 1.Đảm bảo thư mục face_dataset có ít nhất một file .npy đã được thu thập từ bước trước.
+- 1. Đảm bảo thư mục face_dataset có ít nhất một file .npy đã được thu thập từ bước trước.
 
-2️⃣ Chạy script Python:
-
-bash
-Sao chép
-Chỉnh sửa
+- 2️. Chạy script Python:
+```
 python face_recognition.py
-3️⃣ Hệ thống sẽ tải toàn bộ dữ liệu khuôn mặt, huấn luyện mô hình nhận diện.
+```
+- 3. Hệ thống sẽ tải toàn bộ dữ liệu khuôn mặt, huấn luyện mô hình nhận diện.
 Thông tin hiển thị:
-
-yaml
-Sao chép
-Chỉnh sửa
-[INFO] Loaded training data:
+```[INFO] Loaded training data:
   Faces: (số lượng ảnh, kích thước vector)
   Labels: (số lượng nhãn)
-4️⃣ Mở webcam nhận diện khuôn mặt.
-
+```
+- 4. Mở webcam nhận diện khuôn mặt.
 Nếu phát hiện khuôn mặt:
-
+```
 Sẽ vẽ khung chữ nhật (xanh lá: nhận diện được, đỏ: Unknown).
-
 Hiển thị tên người trên hình.
+```
 
-5️⃣ Kết thúc nhận diện:
-
+- 5️. Kết thúc nhận diện:
+```
 Nhấn phím q để dừng chương trình.
+```
 
-🟢 4. Một số lưu ý
-✅ Nếu không nhận diện được khuôn mặt:
+---
 
+**Một số lưu ý**
+Nếu không nhận diện được khuôn mặt:
+```
 Kiểm tra ánh sáng webcam.
-
 Đảm bảo khoảng cách mặt – camera không quá xa.
-
 Nếu hiện "Unknown":
-
 Mô hình nhận diện khoảng cách quá lớn so với dữ liệu huấn luyện.
-
 Cần thu thập thêm dữ liệu hoặc giảm THRESHOLD trong mã nhận diện.
-
 Cập nhật dữ liệu nhận diện mới:
-
 Chạy lại chương trình thu thập dữ liệu với tên mới.
-
 Sau đó chạy lại chương trình nhận diện.
+```
 
-🟢 5. Tóm tắt quy trình sử dụng
+**Tóm tắt quy trình sử dụng**
 Thu thập dữ liệu khuôn mặt:
-
+```
 Chạy script thứ nhất.
-
 Nhập tên.
-
 Nhấn q để lưu.
+```
 
 Huấn luyện và nhận diện:
-
+```
 Chạy script thứ hai.
-
 Hệ thống tự động huấn luyện.
-
 Nhận diện thời gian thực.
+```
 
+---
 
 ## Tài liệu tham khảo
 
