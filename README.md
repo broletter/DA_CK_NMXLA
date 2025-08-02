@@ -63,7 +63,7 @@ Thư mục này sẽ chứa các file .npy lưu dữ liệu khuôn mặt.
 
 ---
 
-**Các bước chạy chương trình thu thập dữ liệu khuôn mặt**
+#Các bước chạy chương trình thu thập dữ liệu khuôn mặt
 Đây là đoạn code thứ nhất, để thu thập dữ liệu và lưu thành file .npy.
 
 - 1.Chạy script Python:
